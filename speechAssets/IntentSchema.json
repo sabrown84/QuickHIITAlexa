@@ -1,0 +1,44 @@
+{
+  "intents": [
+    {
+      "intent": "AddUserIntent",
+      "slots": [
+        {
+          "name": "UserName",
+          "type": "LIST_OF_USER_NAMES"
+        }
+      ]
+    },
+    {
+      "intent": "AddUserExercisesIntent",
+      "slots": [
+        {
+          "name": "UserName",
+          "type": "LIST_OF_USER_NAMES"
+        },
+        {
+          "name": "ExerciseNumber",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "ResetUsersIntent"
+    },
+    {
+      "intent": "NewWorkoutIntent"
+    },
+    {
+      "intent": "TellExerciseNumberIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
