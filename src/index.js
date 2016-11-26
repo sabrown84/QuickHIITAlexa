@@ -63,7 +63,8 @@ var nodes = [{ "node": 1, "message": "Which would you like to do today: Arms, Le
 //              { "node": 15, "message": " do yoga!", "yes": 0, "no": 0, "description": "Yoga builds strength and flexibility, can be done from the comfort of your home, and brings a better connection to your body." },
 // ];
 
-
+// This is the intial welcome message
+var welcomeMessage = "Welcome to the quick hit, are you ready to work out?";
 
 exports.handler = function (event, context) {
     var scoreKeeper = new ScoreKeeper();

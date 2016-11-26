@@ -10,435 +10,426 @@ ResetUsersIntent clear last user
 ResetUsersIntent clear last exercise number
 ResetUsersIntent clear last exercise
 ResetUsersIntent clear last numbers
-ResetUsersIntent clear my players
-ResetUsersIntent clear my game
 ResetUsersIntent clear my participants
-ResetUsersIntent clear my points
-ResetPlayersIntent clear my numbers
-ResetPlayersIntent clear my score
-ResetPlayersIntent clear old game
-ResetPlayersIntent clear old participants
-ResetPlayersIntent clear old players
-ResetPlayersIntent clear old points
-ResetPlayersIntent clear old numbers
-ResetPlayersIntent clear old score
-ResetPlayersIntent clear our game
-ResetPlayersIntent clear our participants
-ResetPlayersIntent clear our players
-ResetPlayersIntent clear our points
-ResetPlayersIntent clear our numbers
-ResetPlayersIntent clear our score
-ResetPlayersIntent clear participants
-ResetPlayersIntent clear past game
-ResetPlayersIntent clear past participants
-ResetPlayersIntent clear past players
-ResetPlayersIntent clear past points
-ResetPlayersIntent clear past numbers
-ResetPlayersIntent clear past score
-ResetPlayersIntent clear players
-ResetPlayersIntent clear that game
-ResetPlayersIntent clear that score
-ResetPlayersIntent clear the game
-ResetPlayersIntent clear the participants
-ResetPlayersIntent clear the players
-ResetPlayersIntent clear the points
-ResetPlayersIntent clear the numbers
-ResetPlayersIntent clear the score
-ResetPlayersIntent clear those participants
-ResetPlayersIntent clear those players
-ResetPlayersIntent clear those points
-ResetPlayersIntent clear those numbers
-ResetPlayersIntent delete
-ResetPlayersIntent delete a game
-ResetPlayersIntent delete game
-ResetPlayersIntent delete points
-ResetPlayersIntent delete numbers
-ResetPlayersIntent delete score
-ResetPlayersIntent delete last game
-ResetPlayersIntent delete last participants
-ResetPlayersIntent delete last players
-ResetPlayersIntent delete last points
-ResetPlayersIntent delete last numbers
-ResetPlayersIntent delete last score
-ResetPlayersIntent delete my players
-ResetPlayersIntent delete my game
-ResetPlayersIntent delete my participants
-ResetPlayersIntent delete my points
-ResetPlayersIntent delete my numbers
-ResetPlayersIntent delete my score
-ResetPlayersIntent delete old game
-ResetPlayersIntent delete old participants
-ResetPlayersIntent delete old players
-ResetPlayersIntent delete old points
-ResetPlayersIntent delete old numbers
-ResetPlayersIntent delete old score
-ResetPlayersIntent delete our game
-ResetPlayersIntent delete our participants
-ResetPlayersIntent delete our players
-ResetPlayersIntent delete our points
-ResetPlayersIntent delete our numbers
-ResetPlayersIntent delete our score
-ResetPlayersIntent delete participants
-ResetPlayersIntent delete past game
-ResetPlayersIntent delete past participants
-ResetPlayersIntent delete past players
-ResetPlayersIntent delete past points
-ResetPlayersIntent delete past numbers
-ResetPlayersIntent delete past score
-ResetPlayersIntent delete players
-ResetPlayersIntent delete that game
-ResetPlayersIntent delete that score
-ResetPlayersIntent delete the game
-ResetPlayersIntent delete the participants
-ResetPlayersIntent delete the players
-ResetPlayersIntent delete the points
-ResetPlayersIntent delete the numbers
-ResetPlayersIntent delete the score
-ResetPlayersIntent delete those participants
-ResetPlayersIntent delete those players
-ResetPlayersIntent delete those points
-ResetPlayersIntent delete those numbers
-ResetPlayersIntent erase
-ResetPlayersIntent erase a game
-ResetPlayersIntent erase game
-ResetPlayersIntent erase points
-ResetPlayersIntent erase numbers
-ResetPlayersIntent erase score
-ResetPlayersIntent erase last game
-ResetPlayersIntent erase last participants
-ResetPlayersIntent erase last players
-ResetPlayersIntent erase last points
-ResetPlayersIntent erase last numbers
-ResetPlayersIntent erase last score
-ResetPlayersIntent erase my players
-ResetPlayersIntent erase my game
-ResetPlayersIntent erase my participants
-ResetPlayersIntent erase my points
-ResetPlayersIntent erase my numbers
-ResetPlayersIntent erase my score
-ResetPlayersIntent erase old game
-ResetPlayersIntent erase old participants
-ResetPlayersIntent erase old players
-ResetPlayersIntent erase old points
-ResetPlayersIntent erase old numbers
-ResetPlayersIntent erase old score
-ResetPlayersIntent erase our game
-ResetPlayersIntent erase our participants
-ResetPlayersIntent erase our players
-ResetPlayersIntent erase our points
-ResetPlayersIntent erase our numbers
-ResetPlayersIntent erase our score
-ResetPlayersIntent erase participants
-ResetPlayersIntent erase past game
-ResetPlayersIntent erase past participants
-ResetPlayersIntent erase past players
-ResetPlayersIntent erase past points
-ResetPlayersIntent erase past numbers
-ResetPlayersIntent erase past score
-ResetPlayersIntent erase players
-ResetPlayersIntent erase that game
-ResetPlayersIntent erase that score
-ResetPlayersIntent erase the game
-ResetPlayersIntent erase the participants
-ResetPlayersIntent erase the players
-ResetPlayersIntent erase the points
-ResetPlayersIntent erase the numbers
-ResetPlayersIntent erase the score
-ResetPlayersIntent erase those participants
-ResetPlayersIntent erase those players
-ResetPlayersIntent erase those points
-ResetPlayersIntent erase those numbers
-ResetPlayersIntent forget
-ResetPlayersIntent forget a game
-ResetPlayersIntent forget game
-ResetPlayersIntent forget points
-ResetPlayersIntent forget numbers
-ResetPlayersIntent forget score
-ResetPlayersIntent forget last game
-ResetPlayersIntent forget last participants
-ResetPlayersIntent forget last players
-ResetPlayersIntent forget last points
-ResetPlayersIntent forget last numbers
-ResetPlayersIntent forget last score
-ResetPlayersIntent forget my players
-ResetPlayersIntent forget my game
-ResetPlayersIntent forget my participants
-ResetPlayersIntent forget my points
-ResetPlayersIntent forget my numbers
-ResetPlayersIntent forget my score
-ResetPlayersIntent forget old game
-ResetPlayersIntent forget old participants
-ResetPlayersIntent forget old players
-ResetPlayersIntent forget old points
-ResetPlayersIntent forget old numbers
-ResetPlayersIntent forget old score
-ResetPlayersIntent forget our game
-ResetPlayersIntent forget our participants
-ResetPlayersIntent forget our players
-ResetPlayersIntent forget our points
-ResetPlayersIntent forget our numbers
-ResetPlayersIntent forget our score
-ResetPlayersIntent forget participants
-ResetPlayersIntent forget past game
-ResetPlayersIntent forget past participants
-ResetPlayersIntent forget past players
-ResetPlayersIntent forget past points
-ResetPlayersIntent forget past numbers
-ResetPlayersIntent forget past score
-ResetPlayersIntent forget players
-ResetPlayersIntent forget that game
-ResetPlayersIntent forget that score
-ResetPlayersIntent forget the game
-ResetPlayersIntent forget the participants
-ResetPlayersIntent forget the players
-ResetPlayersIntent forget the points
-ResetPlayersIntent forget the numbers
-ResetPlayersIntent forget the score
-ResetPlayersIntent forget those participants
-ResetPlayersIntent forget those players
-ResetPlayersIntent forget those points
-ResetPlayersIntent forget those numbers
-ResetPlayersIntent remove
-ResetPlayersIntent remove a game
-ResetPlayersIntent remove game
-ResetPlayersIntent remove points
-ResetPlayersIntent remove numbers
-ResetPlayersIntent remove score
-ResetPlayersIntent remove last game
-ResetPlayersIntent remove last participants
-ResetPlayersIntent remove last players
-ResetPlayersIntent remove last points
-ResetPlayersIntent remove last numbers
-ResetPlayersIntent remove last score
-ResetPlayersIntent remove my players
-ResetPlayersIntent remove my game
-ResetPlayersIntent remove my participants
-ResetPlayersIntent remove my points
-ResetPlayersIntent remove my numbers
-ResetPlayersIntent remove my score
-ResetPlayersIntent remove old game
-ResetPlayersIntent remove old participants
-ResetPlayersIntent remove old players
-ResetPlayersIntent remove old points
-ResetPlayersIntent remove old numbers
-ResetPlayersIntent remove old score
-ResetPlayersIntent remove our game
-ResetPlayersIntent remove our participants
-ResetPlayersIntent remove our players
-ResetPlayersIntent remove our points
-ResetPlayersIntent remove our numbers
-ResetPlayersIntent remove our score
-ResetPlayersIntent remove participants
-ResetPlayersIntent remove past game
-ResetPlayersIntent remove past participants
-ResetPlayersIntent remove past players
-ResetPlayersIntent remove past points
-ResetPlayersIntent remove past numbers
-ResetPlayersIntent remove past score
-ResetPlayersIntent remove players
-ResetPlayersIntent remove that game
-ResetPlayersIntent remove that score
-ResetPlayersIntent remove the game
-ResetPlayersIntent remove the participants
-ResetPlayersIntent remove the players
-ResetPlayersIntent remove the points
-ResetPlayersIntent remove the numbers
-ResetPlayersIntent remove the score
-ResetPlayersIntent remove those participants
-ResetPlayersIntent remove those players
-ResetPlayersIntent remove those points
-ResetPlayersIntent remove those numbers
-ResetPlayersIntent reset
-ResetPlayersIntent reset a game
-ResetPlayersIntent reset game
-ResetPlayersIntent reset points
-ResetPlayersIntent reset numbers
-ResetPlayersIntent reset score
-ResetPlayersIntent reset last game
-ResetPlayersIntent reset last participants
-ResetPlayersIntent reset last players
-ResetPlayersIntent reset last points
-ResetPlayersIntent reset last numbers
-ResetPlayersIntent reset last score
-ResetPlayersIntent reset my players
-ResetPlayersIntent reset my game
-ResetPlayersIntent reset my participants
-ResetPlayersIntent reset my points
-ResetPlayersIntent reset my numbers
-ResetPlayersIntent reset my score
-ResetPlayersIntent reset old game
-ResetPlayersIntent reset old participants
-ResetPlayersIntent reset old players
-ResetPlayersIntent reset old points
-ResetPlayersIntent reset old numbers
-ResetPlayersIntent reset old score
-ResetPlayersIntent reset our game
-ResetPlayersIntent reset our participants
-ResetPlayersIntent reset our players
-ResetPlayersIntent reset our points
-ResetPlayersIntent reset our numbers
-ResetPlayersIntent reset our score
-ResetPlayersIntent reset participants
-ResetPlayersIntent reset past game
-ResetPlayersIntent reset past participants
-ResetPlayersIntent reset past players
-ResetPlayersIntent reset past points
-ResetPlayersIntent reset past numbers
-ResetPlayersIntent reset past score
-ResetPlayersIntent reset players
-ResetPlayersIntent reset that game
-ResetPlayersIntent reset that score
-ResetPlayersIntent reset the game
-ResetPlayersIntent reset the participants
-ResetPlayersIntent reset the players
-ResetPlayersIntent reset the points
-ResetPlayersIntent reset the numbers
-ResetPlayersIntent reset the score
-ResetPlayersIntent reset those participants
-ResetPlayersIntent reset those players
-ResetPlayersIntent reset those points
-ResetPlayersIntent reset those numbers
-ResetPlayersIntent wipe
-ResetPlayersIntent wipe a game
-ResetPlayersIntent wipe game
-ResetPlayersIntent wipe points
-ResetPlayersIntent wipe numbers
-ResetPlayersIntent wipe score
-ResetPlayersIntent wipe last game
-ResetPlayersIntent wipe last participants
-ResetPlayersIntent wipe last players
-ResetPlayersIntent wipe last points
-ResetPlayersIntent wipe last numbers
-ResetPlayersIntent wipe last score
-ResetPlayersIntent wipe my players
-ResetPlayersIntent wipe my game
-ResetPlayersIntent wipe my participants
-ResetPlayersIntent wipe my points
-ResetPlayersIntent wipe my numbers
-ResetPlayersIntent wipe my score
-ResetPlayersIntent wipe old game
-ResetPlayersIntent wipe old participants
-ResetPlayersIntent wipe old players
-ResetPlayersIntent wipe old points
-ResetPlayersIntent wipe old numbers
-ResetPlayersIntent wipe old score
-ResetPlayersIntent wipe our game
-ResetPlayersIntent wipe our participants
-ResetPlayersIntent wipe our players
-ResetPlayersIntent wipe our points
-ResetPlayersIntent wipe our numbers
-ResetPlayersIntent wipe our score
-ResetPlayersIntent wipe participants
-ResetPlayersIntent wipe past game
-ResetPlayersIntent wipe past participants
-ResetPlayersIntent wipe past players
-ResetPlayersIntent wipe past points
-ResetPlayersIntent wipe past numbers
-ResetPlayersIntent wipe past score
-ResetPlayersIntent wipe players
-ResetPlayersIntent wipe that game
-ResetPlayersIntent wipe that score
-ResetPlayersIntent wipe the game
-ResetPlayersIntent wipe the participants
-ResetPlayersIntent wipe the players
-ResetPlayersIntent wipe the points
-ResetPlayersIntent wipe the numbers
-ResetPlayersIntent wipe the score
-ResetPlayersIntent wipe those participants
-ResetPlayersIntent wipe those players
-ResetPlayersIntent wipe those points
+ResetUsersIntent clear my workout
+ResetUsersIntent clear my users
+ResetUsersIntent clear my exercises
+ResetUsersIntent clear my numbers
+ResetUsersIntent clear my exercise
+ResetUsersIntent clear old workout
+ResetUsersIntent clear old users
+ResetUsersIntent clear old players
+ResetUsersIntent clear old exercises
+ResetUsersIntent clear old exercise numbers
+ResetUsersIntent clear old workout
+ResetUsersIntent clear our workout
+ResetUsersIntent clear our participants
+ResetUsersIntent clear our users
+ResetUsersIntent clear our exercise numbers
+ResetUsersIntent clear our numbers
+ResetUsersIntent clear our workout
+ResetUsersIntent clear participants
+ResetUsersIntent clear past workout
+ResetUsersIntent clear past participants
+ResetUsersIntent clear past users
+ResetUsersIntent clear past exercises
+ResetUsersIntent clear past numbers
+ResetUsersIntent clear past exercise numbers
+ResetUsersIntent clear users
+ResetUsersIntent clear that workout
+ResetUsersIntent clear that exercise number
+ResetUsersIntent clear the workout
+ResetUsersIntent clear the participants
+ResetUsersIntent clear the users
+ResetUsersIntent clear the exercises
+ResetUsersIntent clear the numbers
+ResetUsersIntent clear the exercise numbers
+ResetUsersIntent clear those participants
+ResetUsersIntent clear those users
+ResetUsersIntent clear those exercises
+ResetUsersIntent clear those numbers
+ResetUsersIntent delete
+ResetUsersIntent delete a workout
+ResetUsersIntent delete workout
+ResetUsersIntent delete exercises
+ResetUsersIntent delete numbers
+ResetUsersIntent delete exercise numbers
+ResetUsersIntent delete last workout
+ResetUsersIntent delete last participants
+ResetUsersIntent delete last users
+ResetUsersIntent delete last exercises
+ResetUsersIntent delete last numbers
+ResetUsersIntent delete last exercise numbers
+ResetUsersIntent delete my users
+ResetUsersIntent delete my workout
+ResetUsersIntent delete my participants
+ResetUsersIntent delete my exercises
+ResetUsersIntent delete my numbers
+ResetUsersIntent delete my exercise numbers
+ResetUsersIntent delete old workout
+ResetUsersIntent delete old participants
+ResetUsersIntent delete old users
+ResetUsersIntent delete old exercises
+ResetUsersIntent delete old numbers
+ResetUsersIntent delete old exercise numbers
+ResetUsersIntent delete our workout
+ResetUsersIntent delete our participants
+ResetUsersIntent delete our users
+ResetUsersIntent delete our exercises
+ResetUsersIntent delete our numbers
+ResetUsersIntent delete our exercise numbers
+ResetUsersIntent delete participants
+ResetUsersIntent delete past workout
+ResetUsersIntent delete past participants
+ResetUsersIntent delete past users
+ResetUsersIntent delete past exercises
+ResetUsersIntent delete past numbers
+ResetUsersIntent delete past exercise numbers
+ResetUsersIntent delete users
+ResetUsersIntent delete that workout
+ResetUsersIntent delete that exercise numbers
+ResetUsersIntent delete the workout
+ResetUsersIntent delete the participants
+ResetUsersIntent delete the users
+ResetUsersIntent delete the exercise numbers
+ResetUsersIntent delete the numbers
+ResetUsersIntent delete the exercises
+ResetUsersIntent delete those participants
+ResetUsersIntent delete those users
+ResetUsersIntent delete those exercises
+ResetUsersIntent delete those numbers
+ResetUsersIntent erase
+ResetUsersIntent erase a workout
+ResetUsersIntent erase workout
+ResetUsersIntent erase exercises
+ResetUsersIntent erase numbers
+ResetUsersIntent erase exercise numbers
+ResetUsersIntent erase last workout
+ResetUsersIntent erase last participants
+ResetUsersIntent erase last users
+ResetUsersIntent erase last exercises
+ResetUsersIntent erase last numbers
+ResetUsersIntent erase last exercise numbers
+ResetUsersIntent erase my users
+ResetUsersIntent erase my workout
+ResetUsersIntent erase my participants
+ResetUsersIntent erase my exercises
+ResetUsersIntent erase my numbers
+ResetUsersIntent erase my exercise numbers
+ResetUsersIntent erase old workout
+ResetUsersIntent erase old participants
+ResetUsersIntent erase old users
+ResetUsersIntent erase old exercises
+ResetUsersIntent erase old numbers
+ResetUsersIntent erase old exercise numbers
+ResetUsersIntent erase our workout
+ResetUsersIntent erase our participants
+ResetUsersIntent erase our users
+ResetUsersIntent erase our exercises
+ResetUsersIntent erase our numbers
+ResetUsersIntent erase our exercise numbers
+ResetUsersIntent erase participants
+ResetUsersIntent erase past workout
+ResetUsersIntent erase past participants
+ResetUsersIntent erase past users
+ResetUsersIntent erase past exercises
+ResetUsersIntent erase past numbers
+ResetUsersIntent erase past exercise numbers
+ResetUsersIntent erase users
+ResetUsersIntent erase that workout
+ResetUsersIntent erase that exercise numbers
+ResetUsersIntent erase the workout
+ResetUsersIntent erase the participants
+ResetUsersIntent erase the users
+ResetUsersIntent erase the exercises
+ResetUsersIntent erase the numbers
+ResetUsersIntent erase the exercise numbers
+ResetUsersIntent erase those participants
+ResetUsersIntent erase those users
+ResetUsersIntent erase those exercises
+ResetUsersIntent erase those numbers
+ResetUsersIntent forget
+ResetUsersIntent forget a workout
+ResetUsersIntent forget workout
+ResetUsersIntent forget exercises
+ResetUsersIntent forget numbers
+ResetUsersIntent forget exercise numbers
+ResetUsersIntent forget last workout
+ResetUsersIntent forget last participants
+ResetUsersIntent forget last users
+ResetUsersIntent forget last exercises
+ResetUsersIntent forget last numbers
+ResetUsersIntent forget last exercise numbers
+ResetUsersIntent forget my users
+ResetUsersIntent forget my workout
+ResetUsersIntent forget my participants
+ResetUsersIntent forget my exercises
+ResetUsersIntent forget my numbers
+ResetUsersIntent forget my exercise numbers
+ResetUsersIntent forget old workout
+ResetUsersIntent forget old participants
+ResetUsersIntent forget old users
+ResetUsersIntent forget old exercises
+ResetUsersIntent forget old numbers
+ResetUsersIntent forget old exercise numbers
+ResetUsersIntent forget our workout
+ResetUsersIntent forget our participants
+ResetUsersIntent forget our users
+ResetUsersIntent forget our exercises
+ResetUsersIntent forget our numbers
+ResetUsersIntent forget our exercise numbers
+ResetUsersIntent forget participants
+ResetUsersIntent forget past workout
+ResetUsersIntent forget past participants
+ResetUsersIntent forget past users
+ResetUsersIntent forget past exercises
+ResetUsersIntent forget past numbers
+ResetUsersIntent forget past exercise numbers
+ResetUsersIntent forget users
+ResetUsersIntent forget that workout
+ResetUsersIntent forget that exercise numbers
+ResetUsersIntent forget the workout
+ResetUsersIntent forget the participants
+ResetUsersIntent forget the users
+ResetUsersIntent forget the exercise
+ResetUsersIntent forget the numbers
+ResetUsersIntent forget the exercise numbers
+ResetUsersIntent forget those participants
+ResetUsersIntent forget those users
+ResetUsersIntent forget those exercises
+ResetUsersIntent forget those numbers
+ResetUsersIntent remove
+ResetUsersIntent remove a workout
+ResetUsersIntent remove workout
+ResetUsersIntent remove exercises
+ResetUsersIntent remove numbers
+ResetUsersIntent remove exercise numbers
+ResetUsersIntent remove last workout
+ResetUsersIntent remove last participants
+ResetUsersIntent remove last users
+ResetUsersIntent remove last exercises
+ResetUsersIntent remove last numbers
+ResetUsersIntent remove last exercise numbers
+ResetUsersIntent remove my users
+ResetUsersIntent remove my workout
+ResetUsersIntent remove my participants
+ResetUsersIntent remove my exercises
+ResetUsersIntent remove my numbers
+ResetUsersIntent remove my exercise numbers
+ResetUsersIntent remove old workout
+ResetUsersIntent remove old participants
+ResetUsersIntent remove old users
+ResetUsersIntent remove old exercises
+ResetUsersIntent remove old numbers
+ResetUsersIntent remove old exercise numbers
+ResetUsersIntent remove our workout
+ResetUsersIntent remove our participants
+ResetUsersIntent remove our users
+ResetUsersIntent remove our exercises
+ResetUsersIntent remove our numbers
+ResetUsersIntent remove our exercise numbers
+ResetUsersIntent remove participants
+ResetUsersIntent remove past exercises
+ResetUsersIntent remove past participants
+ResetUsersIntent remove past users
+ResetUsersIntent remove past exercises
+ResetUsersIntent remove past numbers
+ResetUsersIntent remove past exercise numbers
+ResetUsersIntent remove users
+ResetUsersIntent remove that workout
+ResetUsersIntent remove that exercise numbers
+ResetUsersIntent remove the workout
+ResetUsersIntent remove the participants
+ResetUsersIntent remove the users
+ResetUsersIntent remove the exercises
+ResetUsersIntent remove the numbers
+ResetUsersIntent remove the exercise numbers
+ResetUsersIntent remove those participants
+ResetUsersIntent remove those users
+ResetUsersIntent remove those exercises
+ResetUsersIntent remove those numbers
+ResetUsersIntent reset
+ResetUsersIntent reset a workout
+ResetUsersIntent reset workout
+ResetUsersIntent reset exercises
+ResetUsersIntent reset numbers
+ResetUsersIntent reset exercise numbers
+ResetUsersIntent reset last workout
+ResetUsersIntent reset last participants
+ResetUsersIntent reset last users
+ResetUsersIntent reset last exercises
+ResetUsersIntent reset last numbers
+ResetUsersIntent reset last exercise numbers
+ResetUsersIntent reset my users
+ResetUsersIntent reset my workout
+ResetUsersIntent reset my participants
+ResetUsersIntent reset my exercises
+ResetUsersIntent reset my numbers
+ResetUsersIntent reset my exercise numbers
+ResetUsersIntent reset old workout
+ResetUsersIntent reset old participants
+ResetUsersIntent reset old users
+ResetUsersIntent reset old exercises
+ResetUsersIntent reset old numbers
+ResetUsersIntent reset old exercise numbers
+ResetUsersIntent reset our workout
+ResetUsersIntent reset our participants
+ResetUsersIntent reset our users
+ResetUsersIntent reset our exercises
+ResetUsersIntent reset our numbers
+ResetUsersIntent reset our exercise numbers
+ResetUsersIntent reset participants
+ResetUsersIntent reset past workout
+ResetUsersIntent reset past participants
+ResetUsersIntent reset past users
+ResetUsersIntent reset past exercises
+ResetUsersIntent reset past numbers
+ResetUsersIntent reset past exercise numbers
+ResetUsersIntent reset users
+ResetUsersIntent reset that workout
+ResetUsersIntent reset that exercise numbers
+ResetUsersIntent reset the workout
+ResetUsersIntent reset the participants
+ResetUsersIntent reset the users
+ResetUsersIntent reset the exercises
+ResetUsersIntent reset the numbers
+ResetUsersIntent reset the exercise numbers
+ResetUsersIntent reset those participants
+ResetUsersIntent reset those users
+ResetUsersIntent reset those exercises
+ResetUsersIntent reset those numbers
+ResetUsersIntent wipe
+ResetUsersIntent wipe a workout
+ResetUsersIntent wipe workout
+ResetUsersIntent wipe exercises
+ResetUsersIntent wipe numbers
+ResetUsersIntent wipe exercise numbers
+ResetUsersIntent wipe last workout
+ResetUsersIntent wipe last participants
+ResetUsersIntent wipe last users
+ResetUsersIntent wipe last exercises
+ResetUsersIntent wipe last numbers
+ResetUsersIntent wipe last exercise numbers
+ResetUsersIntent wipe my users
+ResetUsersIntent wipe my workout
+ResetUsersIntent wipe my participants
+ResetUsersIntent wipe my exercises
+ResetUsersIntent wipe my numbers
+ResetUsersIntent wipe my exercise numbers
+ResetUsersIntent wipe old workout
+ResetUsersIntent wipe old participants
+ResetUsersIntent wipe old users
+ResetUsersIntent wipe old exercises
+ResetUsersIntent wipe old numbers
+ResetUsersIntent wipe old exercise numbers
+ResetUsersIntent wipe our workout
+ResetUsersIntent wipe our participants
+ResetUsersIntent wipe our users
+ResetUsersIntent wipe our exercises
+ResetUsersIntent wipe our numbers
+ResetUsersIntent wipe our exercise numbers
+ResetUsersIntent wipe participants
+ResetUsersIntent wipe past workout
+ResetUsersIntent wipe past participants
+ResetUsersIntent wipe past users
+ResetUsersIntent wipe past exercises
+ResetUsersIntent wipe past numbers
+ResetUsersIntent wipe past exercise numbers
+ResetUsersIntent wipe users
+ResetUsersIntent wipe that workout
+ResetUsersIntent wipe that exercise numbers
+ResetUsersIntent wipe the workout
+ResetUsersIntent wipe the participants
+ResetUsersIntent wipe the users
+ResetUsersIntent wipe the exercises
+ResetUsersIntent wipe the numbers
+ResetUsersIntent wipe the exercise numbers
+ResetUsersIntent wipe those participants
+ResetUsersIntent wipe those users
+ResetUsersIntent wipe those exercises
 ResetPlayersIntent wipe those numbers
 
-NewGameIntent begin a game
-NewGameIntent begin a new game
-NewGameIntent begin game
-NewGameIntent begin new game
-NewGameIntent create a game
-NewGameIntent create a new game
-NewGameIntent create game
-NewGameIntent create new game
-NewGameIntent do a game
-NewGameIntent do a new game
-NewGameIntent do game
-NewGameIntent do new game
-NewGameIntent make a game
-NewGameIntent make a new game
-NewGameIntent make game
-NewGameIntent make new game
-NewGameIntent new game
-NewGameIntent open a game
-NewGameIntent open a new game
-NewGameIntent open game
-NewGameIntent open new game
-NewGameIntent restart
-NewGameIntent restart game
-NewGameIntent set up a game
-NewGameIntent set up a new game
-NewGameIntent set up game
-NewGameIntent set up new game
-NewGameIntent begin score
-NewGameIntent create score
-NewGameIntent do score
-NewGameIntent make score
-NewGameIntent open score
-NewGameIntent set up score
-NewGameIntent start a game
+NewWorkoutIntent begin a workout
+NewWorkoutIntent begin a new workout
+NewWorkoutIntent begin workout
+NewWorkoutIntent begin new workout
+NewWorkoutIntent create a workout
+NewWorkoutIntent create a new workout
+NewWorkoutIntent create workout
+NewWorkoutIntent create new workout
+NewWorkoutIntent do a workout
+NewWorkoutIntent do a new workout
+NewWorkoutIntent do workout
+NewWorkoutIntent do new workout
+NewWorkoutIntent make a workout
+NewWorkoutIntent make a new workout
+NewWorkoutIntent make workout
+NewWorkoutIntent make new workout
+NewWorkoutIntent new workout
+NewWorkoutIntent open a workout
+NewWorkoutIntent open a new workout
+NewWorkoutIntent open workout
+NewWorkoutIntent open new workout
+NewWorkoutIntent restart
+NewWorkoutIntent restart workout
+NewWorkoutIntent set up a workout
+NewWorkoutIntent set up a new workout
+NewWorkoutIntent set up workout
+NewWorkoutIntent set up new workout
+NewWorkoutIntent begin exercise numbers
+NewWorkoutIntent create exercise numbers
+NewWorkoutIntent do exercise numbers
+NewWorkoutIntent make exercise numbers
+NewWorkoutIntent open exercise numbers
+NewWorkoutIntent set up exercise numbers
+NewWorkoutIntent start a exercise numbers
 
-TellScoresIntent first
-TellScoresIntent first place
-TellScoresIntent give me the numbers
-TellScoresIntent give me the scoreboard
-TellScoresIntent give us who is in the lead
-TellScoresIntent how do our scores look
-TellScoresIntent last
-TellScoresIntent last place
-TellScoresIntent leaderboard
-TellScoresIntent list current points
-TellScoresIntent loser
-TellScoresIntent numbers
-TellScoresIntent points
-TellScoresIntent rankings
-TellScoresIntent read the standing
-TellScoresIntent recite the points
-TellScoresIntent say the numbers
-TellScoresIntent share our current numbers
-TellScoresIntent standing
-TellScoresIntent state our standing
-TellScoresIntent state the winner
-TellScoresIntent tell me current score
-TellScoresIntent tell me the current score
-TellScoresIntent tell me the score
-TellScoresIntent tell us current score
-TellScoresIntent tell us the current score
-TellScoresIntent tell us the score
-TellScoresIntent tell us who's losing
-TellScoresIntent tell us who's winning
-TellScoresIntent the current score
-TellScoresIntent the ranking
-TellScoresIntent the score
-TellScoresIntent view points
-TellScoresIntent what is the score
-TellScoresIntent what points does everyone have
-TellScoresIntent what scores do everyone have
-TellScoresIntent what's the score
-TellScoresIntent which one of us is in first place
-TellScoresIntent which one of us is winning
-TellScoresIntent who is leading
-TellScoresIntent who's got the most points
+TellExerciseNumberIntent first
+TellExerciseNumberIntent first place
+TellExerciseNumberIntent give me the numbers
+TellExerciseNumberIntent give me the exercise numbers
+TellExerciseNumberIntent give us who is in the lead
+TellExerciseNumberIntent how do our numbers look
+TellExerciseNumberIntent last
+TellExerciseNumberIntent last place
+TellExerciseNumberIntent leaderboard
+TellExerciseNumberIntent list current exercises
+TellExerciseNumberIntent numbers
+TellExerciseNumberIntent rankings
+TellExerciseNumberIntent read the standing
+TellExerciseNumberIntent say the numbers
+TellExerciseNumberIntent share our current numbers
+TellExerciseNumberIntent standing
+TellExerciseNumberIntent state our standing
+TellExerciseNumberIntent state the winner
+TellExerciseNumberIntent tell me current exercise numbers
+TellExerciseNumberIntent tell me the exercise numbers
+TellExerciseNumberIntent tell me the exercise numbers
+TellExerciseNumberIntent tell us current exercise numbers
+TellExerciseNumberIntent tell us the current exercise numbers
+TellExerciseNumberIntent tell us the exercise numbers
+TellExerciseNumberIntent tell us who's winning
+TellExerciseNumberIntent the current exercise numbers
+TellExerciseNumberIntent the ranking
+TellExerciseNumberIntent the exercise numbers
+TellExerciseNumberIntent what is the exercise numbers
+TellExerciseNumberIntent what exercise numbers do everyone have
+TellExerciseNumberIntent what's the exercise numbers
+TellExerciseNumberIntent which one of us is in first place
+TellExerciseNumberIntent which one of us is winning
 TellScoresIntent who's in the lead
-TellScoresIntent winner
 
-AddPlayerIntent add player {PlayerName}
-AddPlayerIntent add {PlayerName}
-AddPlayerIntent add {PlayerName} to the game
-AddPlayerIntent add player {PlayerName} to the game
-AddPlayerIntent add {PlayerName} to the game
-AddPlayerIntent {PlayerName}
+AddUserIntent add user {UserName}
+AddUserIntent add {UserName}
+AddUserIntent add {UserName} to the workout
+AddUserIntent add user {UserName} to the workout
+AddUserIntent add {UserName} to the workout
+AddUserIntent {UserName}
 
-AddScoreIntent give {PlayerName} {ScoreNumber}
-AddScoreIntent give {PlayerName} {ScoreNumber} points
-AddScoreIntent {ScoreNumber} more for {PlayerName}
-AddScoreIntent {ScoreNumber} for {PlayerName}
-AddScoreIntent give {PlayerName} {ScoreNumber} more points
-AddScoreIntent {ScoreNumber} more points for {PlayerName}
-AddScoreIntent {ScoreNumber} points for {PlayerName}
+AddUserExercisesIntent give {UserName} {ExerciseNumber}
+AddUserExercisesIntent give {UserName} {ExerciseNumber} amounts
+AddUserExercisesIntent {ExerciseNumber} more for {UserName}
+AddUserExercisesIntent {ExerciseNumber} for {UserName}
+AddUserExercisesIntent give {UserName} {ExerciseNumber} more points
+AddUserExercisesIntent {ExerciseNumber} more points for {UserName}
+AddUserExercisesIntent {ExerciseNumber} points for {UserName}
