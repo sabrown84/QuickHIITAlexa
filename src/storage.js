@@ -17,26 +17,26 @@ var storage = (function () {
     /*
      * The Game class stores all game states for the user
      */
-    function Game(session, data) {
+    function Workout(session, data) {
         if (data) {
             this.data = data;
         } else {
             this.data = {
-                players: [],
-                scores: {}
+                users: [],
+                exerciseNumbers: {}
             };
         }
         this._session = session;
     }
 
-    Game.prototype = {
-        isEmptyScore: function () {
+    Workout.prototype = {
+        isEmptyExercise: function () {
             //check if any one had non-zero score,
             //it can be used as an indication of whether the game has just started
             var allEmpty = true;
-            var gameData = this.data;
-            gameData.players.forEach(function (player) {
-                if (gameData.scores[player] !== 0) {
+            var workoutData = this.data;
+            workoutData.users.forEach(function (user) {
+                if (workoutData.exerciseNumbers[user] !== 0) {
                     allEmpty = false;
                 }
             });
@@ -45,9 +45,9 @@ var storage = (function () {
         save: function (callback) {
             //save the game states in the session,
             //so next time we can save a read from dynamoDB
-            this._session.attributes.currentGame = this.data;
+            this._session.attributes.currentWorkout = this.data;
             dynamodb.putItem({
-                TableName: 'ScoreKeeperUserData',
+                TableName: 'QuickHiitUserData',
                 Item: {
                     CustomerId: {
                         S: this._session.user.userId
@@ -68,40 +68,40 @@ var storage = (function () {
     };
 
     return {
-        loadGame: function (session, callback) {
-            if (session.attributes.currentGame) {
-                console.log('get game from session=' + session.attributes.currentGame);
-                callback(new Game(session, session.attributes.currentGame));
+        loadWorkout: function (session, callback) {
+            if (session.attributes.currentWorkout) {
+                console.log('get workout from session=' + session.attributes.currentWorkout);
+                callback(new Workout(session, session.attributes.currentWorkout));
                 return;
             }
             dynamodb.getItem({
-                TableName: 'ScoreKeeperUserData',
+                TableName: 'QuickHiitUserData',
                 Key: {
                     CustomerId: {
                         S: session.user.userId
                     }
                 }
             }, function (err, data) {
-                var currentGame;
+                var currentWorkout;
                 if (err) {
                     console.log(err, err.stack);
-                    currentGame = new Game(session);
-                    session.attributes.currentGame = currentGame.data;
-                    callback(currentGame);
+                    currentWorkout = new Workout(session);
+                    session.attributes.currentWorkout = currentWorkout.data;
+                    callback(currentWorkout);
                 } else if (data.Item === undefined) {
-                    currentGame = new Game(session);
-                    session.attributes.currentGame = currentGame.data;
-                    callback(currentGame);
+                    currentWorkout = new Workout(session);
+                    session.attributes.currentWorkout = currentWorkout.data;
+                    callback(currentWorkout);
                 } else {
-                    console.log('get game from dynamodb=' + data.Item.Data.S);
-                    currentGame = new Game(session, JSON.parse(data.Item.Data.S));
-                    session.attributes.currentGame = currentGame.data;
-                    callback(currentGame);
+                    console.log('get workout from dynamodb=' + data.Item.Data.S);
+                    currentWorkout = new Workout(session, JSON.parse(data.Item.Data.S));
+                    session.attributes.currentWorkout = currentWorkout.data;
+                    callback(currentWorkout);
                 }
             });
         },
-        newGame: function (session) {
-            return new Game(session);
+        newWorkout: function (session) {
+            return new Workout(session);
         }
     };
 })();

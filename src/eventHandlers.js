@@ -22,22 +22,22 @@ var registerEventHandlers = function (eventHandlers, skillContext) {
     eventHandlers.onLaunch = function (launchRequest, session, response) {
         //Speak welcome message and ask user questions
         //based on whether there are players or not.
-        storage.loadGame(session, function (currentGame) {
+        storage.loadWork(session, function (currentWorkout) {
             var speechOutput = '',
                 reprompt;
-            if (currentGame.data.players.length === 0) {
-                speechOutput += 'ScoreKeeper, Let\'s start your game. Who\'s your first player?';
-                reprompt = "Please tell me who is your first player?";
-            } else if (currentGame.isEmptyScore()) {
-                speechOutput += 'ScoreKeeper, '
-                    + 'you have ' + currentGame.data.players.length + ' player';
-                if (currentGame.data.players.length > 1) {
+            if (currentWorkout.data.users.length === 0) {
+                speechOutput += 'QuickHiit, Let\'s start your workout. Who\'s your first user?';
+                reprompt = "Please tell me who is your first user?";
+            } else if (currentWorkout.isEmptyExercise()) {
+                speechOutput += 'QuickHiit, '
+                    + 'you have ' + currentWorkout.data.users.length + ' user';
+                if (currentWorkout.data.users.length > 1) {
                     speechOutput += 's';
                 }
-                speechOutput += ' in the game. You can give a player points, add another player, reset all players or exit. Which would you like?';
+                speechOutput += ' in the workout. You can give a user reps, add another user, reset all users or exit. Which would you like?';
                 reprompt = textHelper.completeHelp;
             } else {
-                speechOutput += 'ScoreKeeper, What can I do for you?';
+                speechOutput += 'QuickHiit, What can I do for you?';
                 reprompt = textHelper.nextHelp;
             }
             response.ask(speechOutput, reprompt);

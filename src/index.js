@@ -40,7 +40,7 @@
  *  Alexa: "Jeff has zero points and Bob has three"
  */
 'use strict';
-var ScoreKeeper = require('./scoreKeeper');
+var QuickHiit = require('./quickHiit');
 
 // Questions
 var nodes = [{ "node": 1, "message": "Which would you like to do today: Arms, Legs or Abs?", "Arms": 2, "Legs": 3, "Abs" : 4 },

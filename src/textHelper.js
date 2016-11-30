@@ -11,31 +11,31 @@
 'use strict';
 var textHelper = (function () {
     var nameBlacklist = {
-        player: 1,
-        players: 1
+        user: 1,
+        users: 1
     };
 
     return {
         completeHelp: 'Here\'s some things you can say,'
         + ' add john.'
-        + ' give john 5 points.'
-        + ' tell me the score.'
-        + ' new game.'
+        + ' give john 5 reps.'
+        + ' tell me the exercise number.'
+        + ' new workout.'
         + ' reset.'
         + ' and exit.',
-        nextHelp: 'You can give a player points, add a player, get the current score, or say help. What would you like?',
+        nextHelp: 'You can give a user reps, add a user, get the current exercise numbers, or say help. What would you like?',
 
-        getPlayerName: function (recognizedPlayerName) {
-            if (!recognizedPlayerName) {
+        getUserName: function (recognizedUserName) {
+            if (!recognizedUserName) {
                 return undefined;
             }
-            var split = recognizedPlayerName.indexOf(' '), newName;
+            var split = recognizedUserName.indexOf(' '), newName;
 
             if (split < 0) {
-                newName = recognizedPlayerName;
+                newName = recognizedUserName;
             } else {
                 //the name should only contain a first name, so ignore the second part if any
-                newName = recognizedPlayerName.substring(0, split);
+                newName = recognizedUserName.substring(0, split);
             }
             if (nameBlacklist[newName]) {
                 //if the name is on our blacklist, it must be mis-recognition

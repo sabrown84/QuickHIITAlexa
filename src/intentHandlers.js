@@ -13,27 +13,27 @@ var textHelper = require('./textHelper'),
     storage = require('./storage');
 
 var registerIntentHandlers = function (intentHandlers, skillContext) {
-    intentHandlers.NewGameIntent = function (intent, session, response) {
+    intentHandlers.NewWorkoutIntent = function (intent, session, response) {
         //reset scores for all existing players
-        storage.loadGame(session, function (currentGame) {
-            if (currentGame.data.players.length === 0) {
-                response.ask('New game started. Who\'s your first player?',
-                    'Please tell me who\'s your first player?');
+        storage.loadWorkout(session, function (currentWorkout) {
+            if (currentWorkout.data.users.length === 0) {
+                response.ask('New workout started. Who\'s your first user?',
+                    'Please tell me who\'s your first user?');
                 return;
             }
-            currentGame.data.players.forEach(function (player) {
-                currentGame.data.scores[player] = 0;
+            currentWorkout.data.users.forEach(function (user) {
+                currentWorkout.data.exerciseNumbers[user] = 0;
             });
-            currentGame.save(function () {
-                var speechOutput = 'New game started with '
-                    + currentGame.data.players.length + ' existing player';
-                if (currentGame.data.players.length > 1) {
+            currentWorkout.save(function () {
+                var speechOutput = 'New workout started with '
+                    + currentWorkout.data.users.length + ' existing user';
+                if (currentWorkout.data.users.length > 1) {
                     speechOutput += 's';
                 }
                 speechOutput += '.';
                 if (skillContext.needMoreHelp) {
-                    speechOutput += '. You can give a player points, add another player, reset all players or exit. What would you like?';
-                    var repromptText = 'You can give a player points, add another player, reset all players or exit. What would you like?';
+                    speechOutput += '. You can give a user reps, add another user, reset all users or exit. What would you like?';
+                    var repromptText = 'You can give a user points, add another user, reset all users or exit. What would you like?';
                     response.ask(speechOutput, repromptText);
                 } else {
                     response.tell(speechOutput);
@@ -42,20 +42,20 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
         });
     };
 
-    intentHandlers.AddPlayerIntent = function (intent, session, response) {
+    intentHandlers.AddUserIntent = function (intent, session, response) {
         //add a player to the current game,
         //terminate or continue the conversation based on whether the intent
         //is from a one shot command or not.
-        var newPlayerName = textHelper.getPlayerName(intent.slots.PlayerName.value);
-        if (!newPlayerName) {
+        var newUserName = textHelper.getUserName(intent.slots.UserName.value);
+        if (!newUserName) {
             response.ask('OK. Who do you want to add?', 'Who do you want to add?');
             return;
         }
-        storage.loadGame(session, function (currentGame) {
+        storage.loadWorkout(session, function (currentWorkout) {
             var speechOutput,
                 reprompt;
-            if (currentGame.data.scores[newPlayerName] !== undefined) {
-                speechOutput = newPlayerName + ' has already joined the game.';
+            if (currentWorkout.data.scores[newUserName] !== undefined) {
+                speechOutput = newUserName + ' has already joined the workout.';
                 if (skillContext.needMoreHelp) {
                     response.ask(speechOutput + ' What else?', 'What else?');
                 } else {
@@ -63,19 +63,19 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
                 }
                 return;
             }
-            speechOutput = newPlayerName + ' has joined your game. ';
-            currentGame.data.players.push(newPlayerName);
-            currentGame.data.scores[newPlayerName] = 0;
+            speechOutput = newUserName + ' has joined your game. ';
+            currentWorkout.data.users.push(newUserName);
+            currentWorkout.data.scores[newUserName] = 0;
             if (skillContext.needMoreHelp) {
-                if (currentGame.data.players.length == 1) {
-                    speechOutput += 'You can say, I am Done Adding Players. Now who\'s your next player?';
+                if (currentWorkout.data.users.length == 1) {
+                    speechOutput += 'You can say, I am Done Adding Users. Now who\'s your next user?';
                     reprompt = textHelper.nextHelp;
                 } else {
-                    speechOutput += 'Who is your next player?';
+                    speechOutput += 'Who is your next user?';
                     reprompt = textHelper.nextHelp;
                 }
             }
-            currentGame.save(function () {
+            currentWorkout.save(function () {
                 if (reprompt) {
                     response.ask(speechOutput, reprompt);
                 } else {
@@ -85,101 +85,101 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
         });
     };
 
-    intentHandlers.AddScoreIntent = function (intent, session, response) {
+    intentHandlers.AddExerciseNumbersIntent = function (intent, session, response) {
         //give a player points, ask additional question if slot values are missing.
-        var playerName = textHelper.getPlayerName(intent.slots.PlayerName.value),
-            score = intent.slots.ScoreNumber,
-            scoreValue;
-        if (!playerName) {
-            response.ask('sorry, I did not hear the player name, please say that again', 'Please say the name again');
+        var userName = textHelper.getUserName(intent.slots.UserName.value),
+            exerciseNumbers = intent.slots.ExerciseNumer,
+            exerciseValue;
+        if (!userName) {
+            response.ask('sorry, I did not hear the user name, please say that again', 'Please say the name again');
             return;
         }
-        scoreValue = parseInt(score.value);
-        if (isNaN(scoreValue)) {
-            console.log('Invalid score value = ' + score.value);
-            response.ask('sorry, I did not hear the points, please say that again', 'please say the points again');
+        exerciseValue = parseInt(exerciseNumber.value);
+        if (isNaN(exerciseValue)) {
+            console.log('Invalid exercise value = ' + exerciseNumbers.value);
+            response.ask('sorry, I did not hear the reps, please say that again', 'please say the reps again');
             return;
         }
-        storage.loadGame(session, function (currentGame) {
-            var targetPlayer, speechOutput = '', newScore;
-            if (currentGame.data.players.length < 1) {
-                response.ask('sorry, no player has joined the game yet, what can I do for you?', 'what can I do for you?');
+        storage.loadWorkout(session, function (currentWorkout) {
+            var targetUser, speechOutput = '', newExerciseNumbers;
+            if (currentWorkout.data.users.length < 1) {
+                response.ask('sorry, no user has joined the game yet, what can I do for you?', 'what can I do for you?');
                 return;
             }
-            for (var i = 0; i < currentGame.data.players.length; i++) {
-                if (currentGame.data.players[i] === playerName) {
-                    targetPlayer = currentGame.data.players[i];
+            for (var i = 0; i < currentWorkout.data.users.length; i++) {
+                if (currentWorkout.data.users[i] === userName) {
+                    targetUser = currentWorkout.data.users[i];
                     break;
                 }
             }
-            if (!targetPlayer) {
-                response.ask('Sorry, ' + playerName + ' has not joined the game. What else?', playerName + ' has not joined the game. What else?');
+            if (!targetUser) {
+                response.ask('Sorry, ' + UserName + ' has not joined the workout. What else?', userName + ' has not joined the workout. What else?');
                 return;
             }
-            newScore = currentGame.data.scores[targetPlayer] + scoreValue;
-            currentGame.data.scores[targetPlayer] = newScore;
+            newExerciseNumbers = currentWorkout.data.exerciseNumbers[targetUser] + exerciseValue;
+            currentWorkout.data.exerciseNumbers[targetUser] = newExerciseNumbers;
 
-            speechOutput += scoreValue + ' for ' + targetPlayer + '. ';
-            if (currentGame.data.players.length == 1 || currentGame.data.players.length > 3) {
-                speechOutput += targetPlayer + ' has ' + newScore + ' in total.';
+            speechOutput += exerciseValue + ' for ' + targetUser + '. ';
+            if (currentWorkout.data.users.length == 1 || currentWorkout.data.users.length > 3) {
+                speechOutput += targetUser + ' has ' + newExerciseNumbers + ' in total.';
             } else {
                 speechOutput += 'That\'s ';
-                currentGame.data.players.forEach(function (player, index) {
-                    if (index === currentGame.data.players.length - 1) {
+                currentWorkout.data.users.forEach(function (user, index) {
+                    if (index === currentWorkout.data.users.length - 1) {
                         speechOutput += 'And ';
                     }
-                    speechOutput += player + ', ' + currentGame.data.scores[player];
+                    speechOutput += user + ', ' + currentWorkout.data.exerciseNumbers[user];
                     speechOutput += ', ';
                 });
             }
-            currentGame.save(function () {
+            currentWorkout.save(function () {
                 response.tell(speechOutput);
             });
         });
     };
 
-    intentHandlers.TellScoresIntent = function (intent, session, response) {
+    intentHandlers.TellExerciseNumberIntent = function (intent, session, response) {
         //tells the scores in the leaderboard and send the result in card.
-        storage.loadGame(session, function (currentGame) {
-            var sortedPlayerScores = [],
+        storage.loadWorkout(session, function (currentWorkout) {
+            var sortedExerciseNumbers = [],
                 continueSession,
                 speechOutput = '',
                 leaderboard = '';
-            if (currentGame.data.players.length === 0) {
-                response.tell('Nobody has joined the game.');
+            if (currentWorkout.data.users.length === 0) {
+                response.tell('Nobody has joined the workout.');
                 return;
             }
-            currentGame.data.players.forEach(function (player) {
-                sortedPlayerScores.push({
-                    score: currentGame.data.scores[player],
-                    player: player
+            currentWorkout.data.users.forEach(function (user) {
+                sortedExerciseNumbers.push({
+                    exerciseNumbers: currentWorkout.data.exerciseNumbers[user],
+                    user: user
                 });
             });
-            sortedPlayerScores.sort(function (p1, p2) {
-                return p2.score - p1.score;
+            sortedExerciseNumbers.sort(function (p1, p2) {
+                return p2.exerciseNumbers - p1.exerciseNumbers;
             });
-            sortedPlayerScores.forEach(function (playerScore, index) {
+            sortedExerciseNumbers.forEach(function (userExerciseNumbers, index) {
                 if (index === 0) {
-                    speechOutput += playerScore.player + ' has ' + playerScore.score + 'point';
-                    if (playerScore.score > 1) {
+                    speechOutput += userExerciseNumbers.user + ' has ' + userExerciseNumbers.exerciseNumbers + 'rep';
+                    if (userExerciseNumbers.exerciseNumbers > 1) {
                         speechOutput += 's';
                     }
-                } else if (index === sortedPlayerScores.length - 1) {
-                    speechOutput += 'And ' + playerScore.player + ' has ' + playerScore.score;
+                } else if (index === sortedExerciseNumbers.length - 1) {
+                    speechOutput += 'And ' + userExerciseNumbers.user + ' has ' + userExerciseNumbers.exerciseNumbers;
                 } else {
-                    speechOutput += playerScore.player + ', ' + playerScore.score;
+                    speechOutput += userExerciseNumbers.user + ', ' + userExerciseNumbers.exerciseNumbers;
                 }
                 speechOutput += '. ';
-                leaderboard += 'No.' + (index + 1) + ' - ' + playerScore.player + ' : ' + playerScore.score + '\n';
+                leaderboard += 'No.' + (index + 1) + ' - ' + userExerciseNumbers.user + ' : ' + userExerciseNumbers.exerciseNumbers + '\n';
             });
             response.tellWithCard(speechOutput, "Leaderboard", leaderboard);
         });
     };
 
-    intentHandlers.ResetPlayersIntent = function (intent, session, response) {
+    intentHandlers.ResetUsersIntent = function (intent, session, response) {
         //remove all players
-        storage.newGame(session).save(function () {
-            response.ask('New game started without players, who do you want to add first?', 'Who do you want to add first?');
+        storage.newWorkout(session).save(function () {
+            response.ask('New workout started without users, who do you want to add first?', 'Who do you want to add first?');
         });
     };
 
@@ -194,7 +194,7 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
 
     intentHandlers['AMAZON.CancelIntent'] = function (intent, session, response) {
         if (skillContext.needMoreHelp) {
-            response.tell('Okay.  Whenever you\'re ready, you can start giving points to the players in your game.');
+            response.tell('Okay.  Whenever you\'re ready, you can start giving reps to the players in your workout');
         } else {
             response.tell('');
         }
@@ -202,7 +202,7 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
 
     intentHandlers['AMAZON.StopIntent'] = function (intent, session, response) {
         if (skillContext.needMoreHelp) {
-            response.tell('Okay.  Whenever you\'re ready, you can start giving points to the players in your game.');
+            response.tell('Okay.  Whenever you\'re ready, you can start giving reps to the players in your workout.');
         } else {
             response.tell('');
         }
