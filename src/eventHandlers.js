@@ -22,7 +22,7 @@ var registerEventHandlers = function (eventHandlers, skillContext) {
     eventHandlers.onLaunch = function (launchRequest, session, response) {
         //Speak welcome message and ask user questions
         //based on whether there are players or not.
-        storage.loadWork(session, function (currentWorkout) {
+        storage.loadWorkout(session, function (currentWorkout) {
             var speechOutput = '',
                 reprompt;
             if (currentWorkout.data.users.length === 0) {

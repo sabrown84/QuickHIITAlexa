@@ -46,7 +46,7 @@ var QuickHiit = require('./quickHiit');
 var nodes = [{ "node": 1, "message": "Which would you like to do today: Arms, Legs or Abs?", "Arms": 2, "Legs": 3, "Abs" : 4 },
              { "node": 2, "message": "How hard to you want to work your arms: Level one, two, or three?", "one": 5, "two": 6, "three" : 7 },
              { "node": 3, "message": "How hard to you want to work your legs: Level one, two, or three?", "one": 8, "two": 9, "three" : 10 },
-             { "node": 4, "message": "How hard to you want to work your abs: Level one, two, or three?", "one": 11, "two": 12, "three" : 13 },
+             { "node": 4, "message": "How hard to you want to work your abs: Level one, two, or three?", "one": 11, "two": 12, "three" : 13 }];
 //              { "node": 5, "message": "Do you want to get wet?", "yes": 10, "no": 11 },
 //              { "node": 6, "message": "Do you want to play a sport?", "yes": 12, "no": 13 },
 //              { "node": 7, "message": "Do you want to do bodybuilding?", "yes": 14, "no": 15 },
@@ -67,6 +67,6 @@ var nodes = [{ "node": 1, "message": "Which would you like to do today: Arms, Le
 var welcomeMessage = "Welcome to the quick hit, are you ready to work out?";
 
 exports.handler = function (event, context) {
-    var scoreKeeper = new ScoreKeeper();
-    scoreKeeper.execute(event, context);
+    var quickHiit = new QuickHiit();
+    quickHiit.execute(event, context);
 };
