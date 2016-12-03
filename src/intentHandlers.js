@@ -51,6 +51,7 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
             response.ask('OK. Who do you want to add?', 'Who do you want to add?');
             return;
         }
+        console.log(JSON.stringify(intent));
         storage.loadWorkout(session, function (currentWorkout) {
             var speechOutput,
                 reprompt;

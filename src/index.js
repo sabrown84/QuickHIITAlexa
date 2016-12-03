@@ -46,22 +46,19 @@ var QuickHiit = require('./quickHiit');
 var nodes = [{ "node": 1, "message": "Which would you like to do today: Arms, Legs or Abs?", "Arms": 2, "Legs": 3, "Abs" : 4 },
              { "node": 2, "message": "How hard to you want to work your arms: Level one, two, or three?", "one": 5, "two": 6, "three" : 7 },
              { "node": 3, "message": "How hard to you want to work your legs: Level one, two, or three?", "one": 8, "two": 9, "three" : 10 },
-             { "node": 4, "message": "How hard to you want to work your abs: Level one, two, or three?", "one": 11, "two": 12, "three" : 13 }];
-//              { "node": 5, "message": "Do you want to get wet?", "yes": 10, "no": 11 },
-//              { "node": 6, "message": "Do you want to play a sport?", "yes": 12, "no": 13 },
-//              { "node": 7, "message": "Do you want to do bodybuilding?", "yes": 14, "no": 15 },
+             { "node": 4, "message": "How hard to you want to work your abs: Level one, two, or three?", "one": 11, "two": 12, "three" : 13 }
 //
-//
-// // Answers & descriptions
-//              { "node": 8,  "message": " play football!", "yes": 0, "no": 0, "description": "Football is a great team sport with plenty of running and requires only a field and a ball." },
-//              { "node": 9,  "message": " do crossfit!", "yes": 0, "no": 0, "description": "Crossfit, while not a team sport is a great group activity that exercises numerous muscle groups." },
-//              { "node": 10, "message": " take a swim!", "yes": 0, "no": 0, "description": "Swimming burns tremendous ammounts of calories and is a good way to keep cool on a hot summer's day." },
-//              { "node": 11, "message": " go on a run!", "yes": 0, "no": 0, "description": "Running is a great solo activity to sweat it out and clear your head." },
-//              { "node": 12, "message": " play basketball!", "yes": 0, "no": 0, "description": "Basketball is a great way to get cardio and train hand eye coordination." },
+// // Answers & Workout lists
+                //
+              { "node": 5,  "message": " Time to get you started! Do you want a list of the exercises?", "yes": 14, "no": 0, "description": "For this workout you will need a set of dumbbells, and a chair or bench. Here's the list of exercises: bicep curls, diamond push-ups, tricep dips, front raises, standing overhead press, regular push-ups, hammer curls, tricep kickbacks, and side raises. We will complete each exercise within 20 seconds and 10 seconds to rest. Are you ready?", "yes": 15, "no": 0 },
+              { "node": 6,  "message": " Are your strong arms ready to go?", "yes": 16, "no": 0, "description": "For this workout you will need a set of dumbbells, and a chair or bench. Here's the list of exercises: upright row, bent over reverse fly, overhead tricep extension, elevated bicep curl, bent over row, push-ups, L raise, chest fly, single leg dips right leg, single leg dips left leg. We will complete each exercise within 20 seconds and 10 seconds to rest. Are you ready?", "yes": 17, "no": 0 },
+              { "node": 7, "message": " Warrior arms, are you ready?", "yes": 18, "no": 0, "description": "For this workout you will need a set of dumbbells, and a mat. Here's the list of exercises: Curl and press, bent over row to kickback, right arm tricep extension balancing on left foot, left are tricep extension balancing on left foot, push up to alternating rows, lying dumbbell fly, mountain climbers, shoulder press with right knee raise, shoulder press with left knee raise, plank with alternating arm reach. We will complete each exercise within 20 seconds and 10 seconds to rest. Are you ready?", "yes": 19, "no": 0 },
+              { "node": 8, "message": " Legs are the beginning of your foundation. Are you ready?", "yes": 20, "no": 0, "description": "For this workout you will need a set of dumbbells, and a mat. Here's the list of exercises: Squats, stiff leg deadlifts, calf raises, lunges, side leg raise right, side leg raise left, front kick right, front kick left, sumo squat, glute bridge. We will complete each exercise within 20 seconds and 10 seconds to rest. Are you ready?", "yes": 21, "no": 0 },
+              { "node": 9, "message": " Primal legs time to move, are you ready!", "yes": 22, "no": 0, "description": "Basketball is a great way to get cardio and train hand eye coordination." },
 //              { "node": 13, "message": " do crossfit!", "yes": 0, "no": 0, "description": "Crossfit, while not a team sport is a great group activity that exercises numerous muscle groups." },
 //              { "node": 14, "message": " lift weights!", "yes": 0, "no": 0, "description": "Lifting weights not only builds strength, but can also sculpt sculpt your body." },
 //              { "node": 15, "message": " do yoga!", "yes": 0, "no": 0, "description": "Yoga builds strength and flexibility, can be done from the comfort of your home, and brings a better connection to your body." },
-// ];
+ ];
 
 // This is the intial welcome message
 var welcomeMessage = "Welcome to the quick hit, are you ready to work out?";
